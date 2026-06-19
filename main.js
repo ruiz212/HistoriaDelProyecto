@@ -1,6 +1,27 @@
 
 
 document.addEventListener('DOMContentLoaded', () => {
+  // --- Countdown Timer ---
+  const countDownDate = new Date("Jun 19, 2026 09:00:00").getTime();
+  const updateCountdown = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = countDownDate - now;
+    
+    if (distance < 0) {
+      clearInterval(updateCountdown);
+      document.getElementById("countdown-container").innerHTML = "<h4>¡El producto ya está disponible!</h4>";
+      return;
+    }
+    
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + Math.floor(distance / (1000 * 60 * 60 * 24)) * 24;
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    document.getElementById("cd-hours").innerText = hours.toString().padStart(2, '0');
+    document.getElementById("cd-minutes").innerText = minutes.toString().padStart(2, '0');
+    document.getElementById("cd-seconds").innerText = seconds.toString().padStart(2, '0');
+  }, 1000);
+
   // --- Intersection Observer for Animations ---
   const observerOptions = {
     root: null,

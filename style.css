@@ -454,3 +454,44 @@ h1, h2, h3, h4 {
     display: none; /* simple mobile nav approach for now */
   }
 }
+
+/* Countdown */
+.countdown {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.countdown h4 {
+  margin-bottom: 1rem;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+.time-blocks {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.time-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-block span {
+  font-size: 2.5rem;
+  font-weight: 900;
+  font-family: var(--font-heading);
+  color: var(--text-white);
+  line-height: 1;
+}
+
+.time-block small {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
+}
