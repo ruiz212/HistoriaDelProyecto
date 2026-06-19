@@ -9,7 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (distance < 0) {
       clearInterval(updateCountdown);
-      document.getElementById("countdown-container").innerHTML = "<h4>¡El producto ya está disponible!</h4>";
+      document.getElementById("countdown-container").innerHTML = `
+        <h3 style="color: var(--primary); margin-bottom: 1rem;">¡El Lanzamiento ha Comenzado!</h3>
+        <p style="margin-bottom: 1.5rem;">La espera terminó. Adquiere tu bolso Pull&Go ahora mismo con el precio especial de introducción.</p>
+        <a href="https://pull-gomejoradosale.onrender.com" target="_blank" class="btn-primary" style="padding: 0.8rem 1.5rem;">Comprar Ahora a C$ 799</a>
+      `;
       return;
     }
     
