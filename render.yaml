@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: pull-go-landing
+    env: static
+    buildCommand: ""
+    staticPublishPath: ./
